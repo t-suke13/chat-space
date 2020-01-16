@@ -27,7 +27,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name
 ### Association
 - has_many :messages
 _ has_many :groups_users
@@ -37,7 +37,7 @@ _ has_many :groups,  through:  :groups_users
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groups_id|integer|null: false, foreign_key: true|
+|groups_name|string|null: false|
 ### Association
 - has_many :messages
 _ has_many :users,  through:  :groups_users
@@ -52,7 +52,7 @@ _ has_many :groups,  through:  :groups_users
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 ## groups_usersテーブル
 

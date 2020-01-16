@@ -27,22 +27,22 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null: false|
-|password|string|null: false|
-|username|string|null: false|
+|usersname|string|null: false|
 ### Association
 - has_many :groups
 - has_many :message
+_ has_many :groups_users
+
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
+|image|strings||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- has_many :commentmessage
+- has_many :user
+- has_many :message
 
 ## messageテーブル
 |Column|Type|Options|

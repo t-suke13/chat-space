@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-# Pictweet DB設計
+# chat-space DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -31,10 +31,10 @@ Things you may want to cover:
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has_many :tweets
-- has_many :comments
+- has_many :groups
+- has_many :message
 
-## tweetsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -42,14 +42,26 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
+- has_many :commentmessage
 
-## commentsテーブル
+## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|image|text||
+|text|text||
 |user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :tweet
+- belongs_to :user
+- has_many :groups
+
+## groups_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
 - belongs_to :user

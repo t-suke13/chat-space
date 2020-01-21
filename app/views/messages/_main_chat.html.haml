@@ -1,0 +1,48 @@
+.chat-main
+  .chat-main__group-info
+    .header-leftbox
+      .current-group テスト
+      .member-list 
+        .member-first Member :
+        .member-second aa
+        .member-third bbb 
+    .edit-btn>Edit
+    
+   
+  .chat-main__message-list
+    .message
+      .message__upper-info 
+        .message__upper-talker a
+        .message__upper-date  2020/01/20(Mon)/18:30:15
+      .message__text  aaaa
+
+    .message
+      .message__upper-info 
+        .message__upper-talker a
+        .message__upper-date  2020/01/20(Mon)/18:30:15
+      .message__text  aaaa
+
+    .message
+      .message__upper-info 
+        .message__upper-talker a
+        .message__upper-date  2020/01/20(Mon)/18:30:15
+      .message__text  aaaa
+
+    .message
+      .message__upper-info 
+        .message__upper-talker a
+        .message__upper-date  2020/01/20(Mon)/18:30:15
+      .message__text  aaaa
+
+
+  .chat-main__message-form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text",placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('fas',"image")
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit",class: "submit-btn",value: "send"}      
+
+
+

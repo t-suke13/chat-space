@@ -3,15 +3,19 @@
     .side-ber_user-name
       .top-items
         = current_user.name
-        .top-items__name aa
+        .top-items__name
       
         .top-items__icon
-          =link_to "#", class: "logo-first" do
+          .logo-first
+          =link_to new_group_path do
             = icon('fa','edit')
+          .logo-second
           =link_to edit_user_path(current_user) do
             = icon('fa','cog')
 
     .groups
-      = link_to "#", class: "group" do
-        .group__group-name
-        .group__latest-message
+      - current_user.groups.each do |group|
+        = link_to "#" do
+          .group__group-name
+            =group.name
+          .group__latest-message

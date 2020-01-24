@@ -3,8 +3,7 @@
     .side-ber_user-name
       .top-items
         = current_user.name
-        .top-items__name
-      
+        .top-items__name      
         .top-items__icon
           .logo-first
           =link_to new_group_path do
@@ -15,7 +14,9 @@
 
     .groups
       - current_user.groups.each do |group|
-        = link_to "#" do
+        = link_to group_messages_path(group) do
           .group__group-name
             =group.name
           .group__latest-message
+            = group.show_last_message
+

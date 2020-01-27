@@ -7,12 +7,15 @@
   width: 300px;
   background-color: #253141;
   color: #ffffff;
+  text-decoration: none;
 
   .side-ber_user-name {   
     background-color: #253141;
     height: 100px;
     display: flex;
     align-items: center;
+    color: #ffffff;
+
 
     .top-items{
       width: 260px;
@@ -23,37 +26,32 @@
       justify-content: space-between;
       font-weight: bold;
       font-size: 16px;
+      color: #ffffff;
+
       
-      
-      
-    
       &__name{
-        margin-left: 0.3rem;        
+        margin-left: 0.3rem;  
+              
       }
     
       &__icon{
         display: flex;
         margin-left: 0.3rem;
-        color: #ffffff;
-        
-      
+        color: #ffffff;      
     
         &__icon .logo-first{
           margin-right: 5px;
           line-height:20px;
-          text-decoration: none;
+          color: #ffffff;
         }
       
         &__icon .logo-second{
-          line-height: 20px;          
+          line-height: 20px;
+          color: #ffffff;
+         
         }
       }
-    }
-
-    link_to{
-      text-decoration: none;
-      color: #333333;
-    }
+    }  
   }
   .groups{
     background-color: #2f3e51;
@@ -62,27 +60,35 @@
     overflow: scroll;
     
     
+    
+    
     .group{
       color: white;
       text-decoration: none;
       margin-bottom:  40px;
+      
        
 
       &__group-name {
         color: white;
         margin-bottom: 5px;
         font-size: 15px;
+        
       }
 
       &__latest-message{
         color: white;
         margin-bottom:  40px;
-        font-size: 11px;    
+        font-size: 11px;
+        
       }
     }
   } 
 } 
 
+.icon {
+  color: white;
+}
 
 
 

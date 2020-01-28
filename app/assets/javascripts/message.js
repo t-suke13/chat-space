@@ -53,7 +53,6 @@ $(function(){
       contentType: false
     })
       .done(function(data){
-        // console.table(data)
         var html = buildHTML(data);
         $('.chat-main__message-list').append(html);
         $('form')[0].reset();
@@ -70,7 +69,6 @@ $(function(){
   var reloadMessages = function() {
     
    var last_message_id = $('.message:last').data("message-id");
-   console.log(last_message_id);
     $.ajax({
       
       url: "api/messages",      
@@ -91,8 +89,8 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
-    });
+      alert("ユーザー検索に失敗しました");
+    })
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
